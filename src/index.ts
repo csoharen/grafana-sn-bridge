@@ -91,6 +91,7 @@ async function createIncInServiceNow(env: Env, alert: GrafanaAlert) {
       description: description,
       urgency: '2',
       impact: '2',
+      state: '2',//Work in Progress
     }),
   });
 
@@ -120,8 +121,10 @@ async function updateIncInServiceNow(env: Env, sysId: string, state: string) {
     },
     body: JSON.stringify({
       state: snState,
+      incident_state: snState,
+      close_code: '10',
       close_notes: 'Automatically resolved via Grafana alert recovery webhook.',
-      close_code: 'Closed/Resolved by Monitoring',
+      comments:'Automatically resolved via Grafana alert recovery webhook.',
     }),
   });
 
