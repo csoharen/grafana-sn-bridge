@@ -5,6 +5,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "cso-grafana-sn-bridge",
+	"account_id": "7922770539be610d187c790708a5b699",
 	"main": "src/index.ts",
 	"compatibility_date": "2026-08-25",
 	"observability": {
@@ -13,7 +14,7 @@
 	"upload_source_maps": true,
 	"d1_databases": [
 		{
-			"binding": "grafana_sn_db",
+			"binding": "DB",
 			"database_name": "grafana-sn-db",
 			"database_id": "23190052-806e-4696-8994-c2db7bbb1975"
 		}
